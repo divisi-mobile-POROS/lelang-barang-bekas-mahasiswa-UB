@@ -133,7 +133,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("prodi", prodi.get(0));
                     editor.apply();
                     //Toast.makeText(LoginActivity.this, "test", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, PostActivity.class);
                     startActivity(intent);
                 } catch (Exception e) {
                     disableProgressBar();
