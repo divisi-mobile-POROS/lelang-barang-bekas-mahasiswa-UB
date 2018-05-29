@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostActivity">
+
+    <TextView
+        android:id="@+id/TvJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Data Barang"
+        android:textAlignment="center"
+
+
+        />
+
+    <EditText
+        android:id="@+id/EtNamaBarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Barang"
+        />
+
+    <EditText
+        android:id="@+id/EtHargaBarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Harga Barang"
+        />
+
+    <EditText
+        android:id="@+id/EtDeskripsiBarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Deskripsi Barang"
+        />
+
+
+    <TextView
+        android:id="@+id/TvDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Tanggal"
+        />
+
+    <TextView
+        android:id="@+id/TvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        />
+<TextView
+    android:id="@+id/TvGambarBarang"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Gambar Barang"
+    android:textAlignment="center"
+    />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher" />
+    <Button
+        android:id="@+id/btsubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+
+
+</LinearLayout>
