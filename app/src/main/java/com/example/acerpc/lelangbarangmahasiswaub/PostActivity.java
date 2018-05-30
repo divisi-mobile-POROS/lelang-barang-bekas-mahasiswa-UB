@@ -4,8 +4,10 @@ import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -14,6 +16,7 @@ public class PostActivity extends AppCompatActivity {
     TextView tv;
     Calendar mCurrentDate;
     int day, month, year;
+    Button btnSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class PostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post);
 
         tv = (TextView) findViewById(R.id.TvDate);
+        btnSubmit = (Button) findViewById(R.id.btsubmit);
 
         mCurrentDate = Calendar.getInstance();
 
@@ -46,5 +50,11 @@ public class PostActivity extends AppCompatActivity {
             }
         });
 
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(PostActivity.this, "test", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
