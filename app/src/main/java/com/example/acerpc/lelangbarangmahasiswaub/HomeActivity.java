@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Home extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +18,14 @@ public class Home extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, CreatePost.class);
+                Intent intent = new Intent(HomeActivity.this, CreatePostActivity.class);
                 startActivity(intent);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Search.class);
+                Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
                 startActivity(intent);
             }
         });

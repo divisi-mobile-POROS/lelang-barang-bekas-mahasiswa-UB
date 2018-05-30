@@ -3,7 +3,7 @@ package com.example.acerpc.lelangbarangmahasiswaub;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Search extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
