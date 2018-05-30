@@ -1,8 +1,11 @@
 package com.example.acerpc.lelangbarangmahasiswaub;
 
 import android.app.DatePickerDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -13,48 +16,42 @@ import java.util.Calendar;
 
 public class PostActivity extends AppCompatActivity {
 
-    TextView tv;
-    Calendar mCurrentDate;
-    int day, month, year;
-    Button btnSubmit;
+    private static final String TAG = "PostActivity";
+    private TextView mDisplayDate;
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
+        mDisplayDate = (TextView) findViewById(R.id.TvDate);
 
-        tv = (TextView) findViewById(R.id.TvDate);
-        btnSubmit = (Button) findViewById(R.id.btsubmit);
-
-        mCurrentDate = Calendar.getInstance();
-
-        day = mCurrentDate.get(Calendar.DAY_OF_MONTH);
-        month = mCurrentDate.get(Calendar.MONTH);
-        year = mCurrentDate.get(Calendar.YEAR);
-
-        month = month+1;
-
-        tv.setText(day+"/"+month+"/"+year);
-        tv.setOnClickListener(new View.OnClickListener() {
+        mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(PostActivity.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                       monthOfYear = monthOfYear+1;
-                       tv.setText(dayOfMonth+"/"+monthOfYear+"/"+year);
+            public void onClick(View view) {
+               Calendar cal = Calendar.getInstance();
+               int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
 
-                    }
-                },year,month,day);
-                datePickerDialog.show();
+                DatePickerDialog dialog = new DatePickerDialog(PostActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, mDateSetListener,year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
             }
         });
 
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onClick(View v) {
-                Toast.makeText(PostActivity.this, "test", Toast.LENGTH_SHORT).show();
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                month = month +1;
+
+                Log.d(TAG, "onDateSet: date" +year+ "/"+month+"/"+dayOfMonth);
+                String date = month + "/" + dayOfMonth + "/" + year;
+                mDisplayDate.setText(date);
             }
-        });
+        };
+
     }
 }
+
+
