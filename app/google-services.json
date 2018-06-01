@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "205492074759",
+    "firebase_url": "https://lelang-barang-bekas-mahasiswa.firebaseio.com",
+    "project_id": "lelang-barang-bekas-mahasiswa",
+    "storage_bucket": "lelang-barang-bekas-mahasiswa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205492074759:android:b1d64fd79f241fce",
+        "android_client_info": {
+          "package_name": "com.example.acerpc.lelangbarangmahasiswaub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205492074759-e4ema339jt5n7fjvlsu9puths50n6hvm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acerpc.lelangbarangmahasiswaub",
+            "certificate_hash": "c68df66ef643dfe83b0a2f2a7d2c2efa9bb224b5"
+          }
+        },
+        {
+          "client_id": "205492074759-s5t9tkobk8qi2e8cmrc0ji98dqa3j95g.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "205492074759-s5t9tkobk8qi2e8cmrc0ji98dqa3j95g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOqgtlyTix5jF4d2OWnAKyTNK0hZc02Ow"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205492074759-s5t9tkobk8qi2e8cmrc0ji98dqa3j95g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
